@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import gsap from 'gsap'
 
@@ -21,6 +21,10 @@ export const FabButton = ({ active = false, onClick }) => {
 	const ref = useRef()
 	const [isActive, setIsActive] = useState(active)
 	const icon = isActive ? minus : plus
+
+	useLayoutEffect(() => {
+		setIsActive(active)
+	}, [active])
 
 	const handleMouseEnter = () => {
 		if (isActive) return
