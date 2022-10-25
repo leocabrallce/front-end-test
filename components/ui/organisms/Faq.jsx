@@ -27,7 +27,7 @@ export const Faq = ({ items, categories }) => {
 			<div className="divide-y">
 				{faqItems.map((item) => (
 					<FaqItem
-						key={item.question}
+						key={item.type + item.question}
 						type={item.type}
 						question={item.question}
 						answer={item.answer}
