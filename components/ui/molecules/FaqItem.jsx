@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FabButton } from '../atoms/FabButton'
 import gsap from 'gsap'
@@ -20,7 +20,7 @@ export const FaqItem = ({ type, question, answer }) => {
 	}
 
 	return (
-		<div>
+		<div className='py-8'>
 			<div className="flex flex-row items-center">
 				<div className="basis-3/12 hidden md:block text-primary font-medium">
 					{type}
