@@ -20,7 +20,7 @@ export const FaqItem = ({ type, question, answer }) => {
 	}
 
 	return (
-		<div className='py-8'>
+		<div className="py-8">
 			<div className="flex flex-row items-center">
 				<div className="basis-3/12 hidden md:block text-primary font-medium">
 					{type}
@@ -75,6 +75,8 @@ FaqItem.propTypes = {
 	).isRequired,
 }
 
+// These default values could be empty
+// This is mostly for documentation / demo purposes at Storybook
 FaqItem.defaultProps = {
 	type: 'Type',
 	question: 'Lorem ipsum dolor sit amet',

@@ -25,7 +25,7 @@ export const Dropdown = ({ items = [], onClick }) => {
 	const selectedItemRef = useRef()
 	const [selected, setSelected] = useState('All')
 	const [isOpen, setIsOpen] = useState(false)
-	const filterItems = [selected, ...items]
+	const filterItems = ['All', ...items]
 
 	const toggleDropdown = () => {
 		gsap.context(() => {
