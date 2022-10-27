@@ -26,7 +26,7 @@ export function Testimonials({ testimonials }) {
 			<div className="md:block flex flex-row justify-end mx-6 gap-2">
 				<svg
 					onClick={() => ref.previous()}
-					className="cursor-pointer md:absolute md:bottom-1/2 md:left-12"
+					className="cursor-pointer md:absolute md:bottom-[37%] md:left-12"
 					width="48"
 					height="48"
 					viewBox="0 0 48 48"
@@ -45,7 +45,7 @@ export function Testimonials({ testimonials }) {
 
 				<svg
 					onClick={() => ref.next()}
-					className="cursor-pointer md:absolute md:bottom-1/2 md:right-12"
+					className="cursor-pointer md:absolute md:bottom-[37%] md:right-12"
 					width="48"
 					height="48"
 					viewBox="0 0 48 48"
