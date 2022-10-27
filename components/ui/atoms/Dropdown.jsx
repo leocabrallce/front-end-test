@@ -20,7 +20,7 @@ const chevron = (
 	</svg>
 )
 
-export const Dropdown = ({ items = [], onClick }) => {
+export function Dropdown({ items = [], onClick }) {
 	const optionsRef = useRef()
 	const selectedItemRef = useRef()
 	const [selected, setSelected] = useState('All')

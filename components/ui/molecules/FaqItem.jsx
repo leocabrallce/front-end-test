@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FabButton } from '../atoms/FabButton'
 import gsap from 'gsap'
 
-export const FaqItem = ({ type, question, answer }) => {
+export function FaqItem({ type, question, answer }) {
 	const faqParagraphs = useRef()
 	const [isActive, setIsActive] = useState(false)
 
