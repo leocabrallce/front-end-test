@@ -20,10 +20,10 @@ export function BottomBar({ items }) {
 }
 
 BottomBar.propTypes = {
-	items: PropTypes.shape({
+	items: PropTypes.arrayOf(PropTypes.shape({
 		name: PropTypes.string.isRequired,
 		content: PropTypes.string.isRequired,
-	}),
+	})).isRequired,
 }
 
 BottomBar.defaultValues = {

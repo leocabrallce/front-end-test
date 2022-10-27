@@ -29,9 +29,14 @@ export function Hero({ picture, title, description }) {
 			</div>
 			<div className="flex flex-col gap-12">
 				<div className="text-primary text-5xl">{title}</div>
-				<div className="text-secondary-400 text-xl font-light">
-					{description}
-				</div>
+				{description.map((paragraph, index) => (
+					<div
+						key={index}
+						className="text-secondary-400 text-xl font-light"
+					>
+						{paragraph.data}
+					</div>
+				))}
 			</div>
 		</div>
 	)
@@ -40,12 +45,15 @@ export function Hero({ picture, title, description }) {
 Hero.propTypes = {
 	picture: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
+	description: PropTypes.array.isRequired,
 }
 
 Hero.defaultValues = {
 	picture: '/images/about-md.png',
 	title: 'About the apprenticeship',
-	description:
-		'Our scholarships are designed to give talented and driven young people from any background access to top-class education, experience and network. We offer a fully-funded master’s degree alongside an apprenticeship and a guaranteed job upon graduation.',
+	description: [
+		{
+			data: 'Our scholarships are designed to give talented and driven young people from any background access to top-class education, experience and network. We offer a fully-funded master’s degree alongside an apprenticeship and a guaranteed job upon graduation.',
+		},
+	],
 }
