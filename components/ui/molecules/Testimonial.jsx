@@ -15,7 +15,7 @@ export function Testimonial({
 
 	return (
 		<div className="max-w-[90vw] md:max-w-[50vw] border border-solid border-secondary-200 rounded">
-			<div className="flex flex-row justify-between items-center p-6 sm:p-10">
+			<div className="flex flex-row justify-between items-center p-6 sm:p-10 gap-2">
 				<div className="flex flex-row items-center gap-6">
 					<Image
 						className="rounded-full"
