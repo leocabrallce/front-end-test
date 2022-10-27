@@ -4,6 +4,7 @@ import { Testimonials } from '../components/ui/organisms/Testimonials'
 import { Faq } from '../components/ui/organisms/Faq'
 import { About } from '../components/ui/organisms/About'
 import { Intro } from '../components/ui/organisms/Intro'
+import { Navbar } from '../components/ui/organisms/Navbar'
 
 // TODO: Add background gray geometry at the end
 // TODO: Use API data
@@ -18,6 +19,8 @@ function Home({ data }) {
         <meta name="description" content={meta.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Navbar />
 
       <main>
         <div className='m-12 md:m-48'>
