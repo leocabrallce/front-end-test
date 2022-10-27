@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Testimonial } from '../components/ui/molecules/Testimonial'
+import { Testimonials } from '../components/ui/organisms/Testimonials'
 import { Faq } from '../components/ui/organisms/Faq'
 import ScholarshipRepository from '../repository/scholarship'
 
@@ -15,9 +15,11 @@ function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='container mx-auto'>
-        <Testimonial />
-        <Faq items={faqs.items} categories={faqs.categories} />
+      <main>
+        <Testimonials />
+        <div className='mx-12'>
+          <Faq items={faqs.items} categories={faqs.categories} />
+        </div>
       </main>
 
     </div>
