@@ -19,13 +19,13 @@ function Home({ data }) {
       </Head>
 
       <main>
-        <div className='mx-12'>
+        <div className='mx-48'>
           <About />
         </div>
         <div className='mb-32 mt-44'>
           <Testimonials />
         </div>
-        <div className='mx-12'>
+        <div className='mx-36'>
           <Faq items={faqs.items} categories={faqs.categories} />
         </div>
       </main>
