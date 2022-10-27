@@ -3,6 +3,8 @@ import ScholarshipRepository from '../repository/scholarship'
 import { Testimonials } from '../components/ui/organisms/Testimonials'
 import { Faq } from '../components/ui/organisms/Faq'
 import { About } from '../components/ui/organisms/About'
+import { Intro } from '../components/ui/organisms/Intro'
+import { Navbar } from '../components/ui/organisms/Navbar'
 
 // TODO: Add background gray geometry at the end
 // TODO: Use API data
@@ -18,14 +20,19 @@ function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main>
-        <div className='mx-48'>
+        <div className='m-12 md:m-48'>
+          <Intro />
+        </div>
+        <div className='m-12 md:mx-48'>
           <About />
         </div>
-        <div className='mb-32 mt-44'>
+        <div className='md:mb-32 md:mt-44'>
           <Testimonials />
         </div>
-        <div className='mx-36'>
+        <div className='m-12 md:mx-36'>
           <Faq items={faqs.items} categories={faqs.categories} />
         </div>
       </main>

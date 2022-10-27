@@ -15,7 +15,7 @@ export const Faq = ({ items, categories }) => {
 	return (
 		<div className="md:divide-y">
 			<div className="flex flex-col md:flex-row pb-12 justify-between md:items-center">
-				<h2 className="basis-1/2 text-primary text-[48px]">
+				<h2 className="basis-1/2 text-primary text-[36px] md:text-[48px]">
 					Frequently asked
 					<br />
 					questions
