@@ -1,45 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { Cost } from '../atoms/Cost'
 
+// TODO: Receive other properties
 export function ScholarshipValueCard({ value, primaryText, secondaryText }) {
-	const intl = new Intl.NumberFormat('sp', {
-		style: 'currency',
-		currency: 'EUR',
-		currencyDisplay: 'symbol',
-		trailingZeroDisplay: 'stripIfInteger',
-	})
+	const intl = useMemo(
+		() =>
+			new Intl.NumberFormat('sp', {
+				style: 'currency',
+				currency: 'EUR',
+				currencyDisplay: 'symbol',
+				trailingZeroDisplay: 'stripIfInteger',
+			}),
+		[]
+	)
+	const [formatedValue, setFormatedValue] = useState()
 
-	// TODO: Adjust hr margin
+	useEffect(() => {
+		setFormatedValue(intl.format(value))
+	}, [intl, value])
+
 	return (
-		<div className="border border-solid border-secondary-200 rounded px-6 py-8">
+		<div className="border border-solid border-secondary-200 rounded px-6 py-8 h-full flex flex-col justify-between">
 			<div>
 				<div className="text-primary mb-2 text-sm">
 					Scholarship value
 				</div>
 				<div className="text-secondary-400 text-5xl font-extralight">
-					{intl.format(31300)}
+					{formatedValue}
 				</div>
 			</div>
-			<hr className="divide-x mt-6 mb-12" />
-			<div className="flex flex-row flex-wrap gap-12">
-				<Cost name="Tuition covered" value={20900} />
-				<Cost name="Tuition covered" value={20900} />
-				<Cost name="Tuition covered" value={20900} monthly />
+			<div>
+				<hr className="divide-x border-secondary-200 mt-6 mb-16" />
+				<div className="flex flex-row flex-wrap gap-12">
+					<Cost name="Tuition covered" value={20900} />
+					<Cost name="Tuition covered" value={20900} />
+					<Cost name="Tuition covered" value={20900} monthly />
+				</div>
 			</div>
 		</div>
 	)
 }
 
 ScholarshipValueCard.propTypes = {
-	title: PropTypes.string.isRequired,
-	primaryText: PropTypes.string.isRequired,
-	secondaryText: PropTypes.string.isRequired,
+	value: PropTypes.number.isRequired,
 }
 
 ScholarshipValueCard.defaultProps = {
-	title: 'Study commitment',
-	primaryText: '3 hours / day',
-	secondaryText:
-		'You will complete 15 modules to graduate. Daily classes are 3 hours, plus coursework to complete in your own time.',
+	value: 31300,
 }

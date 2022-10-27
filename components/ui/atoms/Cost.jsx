@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 export function Cost({ name, value, monthly }) {
-	const intl = new Intl.NumberFormat('sp', {
-		style: 'currency',
-		currency: 'EUR',
-		currencyDisplay: 'symbol',
-		trailingZeroDisplay: 'stripIfInteger',
-	})
+	const intl = useMemo(
+		() =>
+			new Intl.NumberFormat('sp', {
+				style: 'currency',
+				currency: 'EUR',
+				currencyDisplay: 'symbol',
+				trailingZeroDisplay: 'stripIfInteger',
+			}),
+		[]
+	)
+	const [formatedValue, setFormatedValue] = useState()
+	const [formatedMonthlyValue, setFormatedMonthlyValue] = useState()
+
+	useEffect(() => {
+		setFormatedValue(intl.format(value))
+		setFormatedMonthlyValue(intl.format(value / 12))
+	}, [intl, value])
 
 	return (
 		<div className="flex flex-col">
@@ -15,10 +26,10 @@ export function Cost({ name, value, monthly }) {
 			<div className="text-secondary-400 font-extralight">
 				{monthly ? (
 					<span>
-						{intl.format(value)} ({intl.format(value / 12)}/month)
+						{formatedValue} ({formatedMonthlyValue}/month)
 					</span>
 				) : (
-					<span>{intl.format(value)}</span>
+					<span>{formatedValue}</span>
 				)}
 			</div>
 		</div>

@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import ScholarshipRepository from '../repository/scholarship'
 import { Testimonials } from '../components/ui/organisms/Testimonials'
 import { Faq } from '../components/ui/organisms/Faq'
-import ScholarshipRepository from '../repository/scholarship'
+import { About } from '../components/ui/organisms/About'
 
 // TODO: Add background gray geometry at the end
+// TODO: Use API data
 function Home({ data }) {
   const { meta } = data
   const { faqs } = data.scholarship
@@ -17,6 +19,9 @@ function Home({ data }) {
       </Head>
 
       <main>
+        <div className='mx-12'>
+          <About />
+        </div>
         <div className='mb-32 mt-44'>
           <Testimonials />
         </div>
