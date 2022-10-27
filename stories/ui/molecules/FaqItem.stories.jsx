@@ -2,18 +2,15 @@ import React from 'react'
 
 import { FaqItem } from '../../../components/ui/molecules/FaqItem'
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const config = {
-	title: 'Example/Molecules/FaqItem',
+	title: 'Example/Molecules/FAQ Item',
 	component: FaqItem,
 }
 export default config
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <FaqItem {...args} />
 
 export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
 	type: 'Type',
 	question: 'Lorem ipsum dolor sit amet',

@@ -36,9 +36,9 @@ export function Testimonials({ testimonials }) {
 					<path
 						d="M26 20L22 24L26 28"
 						stroke="#4F469C"
-						stroke-width="1.2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1.2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 
@@ -55,9 +55,9 @@ export function Testimonials({ testimonials }) {
 					<path
 						d="M23 20L27 24L23 28"
 						stroke="#4F469C"
-						stroke-width="1.2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1.2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 			</div>
