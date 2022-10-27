@@ -35,24 +35,24 @@ function Home({ data }) {
       content: 'Marketing Performance',
     },
     {
-      name: 'Zeptolab',
-      content: 'Marketing Performance',
+      name: 'Location',
+      content: location.name,
     },
     {
-      name: 'Zeptolab',
-      content: 'Marketing Performance',
+      name: 'Duration',
+      content: duration,
     },
     {
-      name: 'Zeptolab',
-      content: 'Marketing Performance',
+      name: 'Start date',
+      content: new Date(scholarship_start_date).toDateString(),
     },
     {
-      name: 'Zeptolab',
-      content: 'Marketing Performance',
+      name: 'Application deadline',
+      content: new Date(application_end_date).toDateString(),
     },
     {
-      name: 'Zeptolab',
-      content: 'Marketing Performance',
+      name: 'Application closes in',
+      content: '6 Day : 22 Hrs : 56 Min',
     },
   ]
 
