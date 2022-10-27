@@ -5,12 +5,40 @@ import { Faq } from '../components/ui/organisms/Faq'
 import { About } from '../components/ui/organisms/About'
 import { Intro } from '../components/ui/organisms/Intro'
 import { Navbar } from '../components/ui/organisms/Navbar'
+import { BottomBar } from '../components/ui/organisms/BottomBar'
 
 // TODO: Add background gray geometry at the end
 // TODO: Use API data
 function Home({ data }) {
   const { meta } = data
   const { faqs } = data.scholarship
+
+  const footer = [
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+    {
+      name: 'Zeptolab',
+      content: 'Marketing Performance',
+    },
+  ]
 
   return (
     <div>
@@ -36,6 +64,8 @@ function Home({ data }) {
           <Faq items={faqs.items} categories={faqs.categories} />
         </div>
       </main>
+
+      <BottomBar items={footer} />
 
     </div>
   )
