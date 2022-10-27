@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Flickity from 'react-flickity-component'
 import { Testimonial } from '../molecules/Testimonial'
+import Image from 'next/image'
 
 export function Testimonials({ testimonials }) {
 	const [ref, setRef] = useState()
 
 	return (
-		<div className="overflow-x-hidden relative">
+		<div className="overflow-x-hidden relative pt-36">
 			<Flickity
 				flickityRef={(r) => setRef(r)}
 				className="carousel"
@@ -60,6 +61,15 @@ export function Testimonials({ testimonials }) {
 						strokeLinejoin="round"
 					/>
 				</svg>
+			</div>
+			<div className="absolute top-0 left-[112px] -z-10">
+				<Image
+					src="/images/pattern-2.png"
+					width={1120}
+					height={395}
+					alt="About background"
+					className="min-w-[440px] min-h-[440px]"
+				/>
 			</div>
 		</div>
 	)
