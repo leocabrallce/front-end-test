@@ -3,6 +3,7 @@ import { Testimonials } from '../components/ui/organisms/Testimonials'
 import { Faq } from '../components/ui/organisms/Faq'
 import ScholarshipRepository from '../repository/scholarship'
 
+// TODO: Add background gray geometry at the end
 function Home({ data }) {
   const { meta } = data
   const { faqs } = data.scholarship
@@ -16,7 +17,9 @@ function Home({ data }) {
       </Head>
 
       <main>
-        <Testimonials />
+        <div className='mb-32 mt-44'>
+          <Testimonials />
+        </div>
         <div className='mx-12'>
           <Faq items={faqs.items} categories={faqs.categories} />
         </div>
