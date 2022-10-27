@@ -6,7 +6,7 @@ import Image from 'next/image'
 export function Intro(props) {
 	return (
 		<div className="flex flex-row flex-wrap-reverse md:flex-nowrap gap-16 md:gap-24">
-			<div className="md:basis-1/2 flex flex-col gap-12">
+			<div className="md:basis-1/2 flex flex-col gap-12 relative">
 				<div className="hidden md:block text-primary text-5xl">
 					Interaction Design Apprenticeship
 				</div>
@@ -32,13 +32,22 @@ export function Intro(props) {
 				<div>
 					<button
 						type="button"
-						class="text-white bg-primary font-medium rounded-full text-sm px-6 py-3 text-center mr-2 mb-2"
+						className="text-white bg-primary font-medium rounded-full text-sm px-6 py-3 text-center mr-2 mb-2"
 					>
 						Apply Now
 					</button>
 				</div>
+
+				<div className="absolute right-0 -top-20 -z-10">
+					<Image
+						src="/images/icon-interaction-design.png"
+						width={206}
+						height={206}
+						alt="About background"
+					/>
+				</div>
 			</div>
-			<div className="md:basis-1/2 flex flex-col gap-6">
+			<div className="md:basis-1/2 flex flex-col gap-6 relative">
 				<div className="md:hidden text-primary text-5xl">
 					Interaction Design Apprenticeship
 				</div>
@@ -58,7 +67,7 @@ export function Intro(props) {
 						</div>
 					</div>
 				</div>
-				<div className="border border-solid border-secondary-200 rounded px-8 py-6">
+				<div className="border border-solid border-secondary-200 rounded px-8 py-6 bg-white">
 					<div className="text-primary mb-2 text-sm">
 						Application closes in
 					</div>
@@ -66,7 +75,7 @@ export function Intro(props) {
 						6 Day : 22 Hrs : 56 Min : 13 Seg
 					</div>
 				</div>
-				<div className="border border-solid border-secondary-200 rounded px-8 py-6 grid grid-cols-2 gap-12">
+				<div className="border border-solid border-secondary-200 rounded px-8 py-6 grid grid-cols-2 gap-12 bg-white">
 					<div>
 						<div className="text-primary mb-2 text-sm">
 							Location
@@ -99,6 +108,16 @@ export function Intro(props) {
 							3 Aug 2020
 						</div>
 					</div>
+				</div>
+
+				<div className="hidden md:block absolute -bottom-36 -right-36 -z-10">
+					<Image
+						src="/images/pattern-1.png"
+						width={560}
+						height={257}
+						alt="About background"
+						className="min-w-[560px] min-h-[257px]"
+					/>
 				</div>
 			</div>
 		</div>
