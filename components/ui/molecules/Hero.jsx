@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 export function Hero({ picture, title, description }) {
 	return (
-		<div className="flex flex-row justify-around items-center gap-36">
-			<div className="min-w-[380px] min-h-[380px]">
+		<div className="flex flex-row flex-wrap md:flex-nowrap justify-around items-center gap-16 md:gap-36 mx-6">
+			<div className="min-w-[252px] min-h-[252px] md:min-w-[380px] md:min-h-[380px]">
 				<Image
 					src={picture}
 					width={380}
 					height={380}
 					alt="About"
-					className="rounded-full "
+					className="rounded-full"
 				/>
 			</div>
 			<div className="flex flex-col gap-12">

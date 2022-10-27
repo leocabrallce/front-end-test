@@ -14,17 +14,17 @@ export function About(props) {
 	}
 	return (
 		<div>
-			<div className='my-24'>
+			<div className="my-16 md:my-24">
 				<Hero {...hero} />
 			</div>
-			<div className="grid grid-rows-2 grid-cols-3 gap-8">
-				<div className="row-span-2">
+			<div className="md:grid md:grid-rows-2 md:grid-cols-3 gap-8">
+				<div className="mb-10 md:mb-0 md:row-span-2">
 					<ScholarshipValueCard />
 				</div>
-				<div>
+				<div className="mb-10">
 					<CommitmentCard />
 				</div>
-				<div>
+				<div className="mb-10">
 					<CommitmentCard />
 				</div>
 				<div className="col-span-2">

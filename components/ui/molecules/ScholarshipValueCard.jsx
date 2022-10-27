@@ -21,19 +21,19 @@ export function ScholarshipValueCard({ value, primaryText, secondaryText }) {
 	}, [intl, value])
 
 	return (
-		<div className="border border-solid border-secondary-200 rounded px-6 py-8 h-full flex flex-col justify-between divide-y divide-secondary-200">
+		<div className="md:border md:border-solid md:border-secondary-200 rounded px-6 py-8 h-full flex flex-col gap-12 md:gap-0 md:justify-between md:divide-y divide-secondary-200">
 			<div>
 				<div className="text-primary mb-2 text-sm">
 					Scholarship value
 				</div>
-				<div className="text-secondary-400 text-5xl font-extralight">
+				<div className="text-secondary-400 md:text-5xl font-extralight">
 					{formatedValue}
 				</div>
 			</div>
-			<div className="flex flex-row flex-wrap gap-12 pt-24">
+			<div className="flex flex-row flex-wrap gap-12 md:pt-24">
 				<Cost name="Tuition covered" value={20900} />
-				<Cost name="Tuition covered" value={20900} />
-				<Cost name="Tuition covered" value={20900} monthly />
+				<Cost name="Remaining" value={2000} />
+				<Cost name="Living stipend" value={8400} monthly />
 			</div>
 		</div>
 	)
