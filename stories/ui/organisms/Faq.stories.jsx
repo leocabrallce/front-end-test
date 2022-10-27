@@ -4,7 +4,7 @@ import { Faq } from '../../../components/ui/organisms/Faq'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const config = {
-	title: 'Example/Organisms/Faq',
+	title: 'Example/Organisms/FAQ',
 	component: Faq,
 }
 export default config

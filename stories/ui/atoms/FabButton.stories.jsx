@@ -4,7 +4,7 @@ import { FabButton } from '../../../components/ui/atoms/FabButton';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const config = {
-  title: 'Example/Atoms/FabButton',
+  title: 'Example/Atoms/FAB Button',
   component: FabButton,
 };
 export default config;
