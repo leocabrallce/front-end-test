@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { CommitmentCard } from '../../../components/ui/molecules/CommitmentCard'
+import { ScholarshipValueCard } from '../../../components/ui/molecules/ScholarshipValueCard'
 
 const config = {
-	title: 'Example/Molecules/Commitment Card',
-	component: CommitmentCard,
+	title: 'Example/Molecules/Scholarship Value Card',
+	component: ScholarshipValueCard,
 }
 export default config
 
-const Template = (args) => <CommitmentCard {...args} />
+const Template = (args) => <ScholarshipValueCard {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
